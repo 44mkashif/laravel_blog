@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container jumbotron text-center">
-        <h1>{{$title}}</h1>
-    </div>
+    <h1 class="text-center">{{$title}}</h1>
 @endsection
