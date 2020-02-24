@@ -4,7 +4,7 @@
 
 <h1 class="text-center">Create Post</h1>
 
-    {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+    {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/data']) !!}
         <div class="row justify-content-center mt-4">
             <div class="col-8">
                 <div class="form-group row">
@@ -15,6 +15,10 @@
                 <div class="form-group row">
                     {{Form::label('body', 'Body', ['class' => 'col-sm-2 col-form-label'])}}
                     {{Form::textarea('body', '', ['id' => 'editor', 'class' => 'form-control col-sm-10'])}}
+                </div>
+
+                <div class="form-group">
+                    {{Form::file('cover-image')}}
                 </div>
 
                 <div class="row">
