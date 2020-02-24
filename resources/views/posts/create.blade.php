@@ -4,7 +4,7 @@
 
 <h1 class="text-center">Create Post</h1>
 
-    {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/data']) !!}
+    {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
         <div class="row justify-content-center mt-4">
             <div class="col-8">
                 <div class="form-group row">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="form-group">
-                    {{Form::file('cover-image')}}
+                    {{Form::file('cover_image')}}
                 </div>
 
                 <div class="row">
